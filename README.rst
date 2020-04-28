@@ -1,5 +1,5 @@
-Filemanager for Wysiwyg TinyMCE
-###############################
+Filemanager for Wysiwyg TinyMCE Plugin
+######################################
 
 Implementation of `Responsive File Manager <https://www.responsivefilemanager.com/>`_ for `wysiwyg-tinymce <https://github.com/jDanek/wysiwyg-tinymce>`_ plugin
 
