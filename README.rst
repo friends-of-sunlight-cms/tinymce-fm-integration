@@ -1,7 +1,7 @@
 Filemanager for Wysiwyg TinyMCE Plugin
 ######################################
 
-Implementation of `Responsive File Manager <https://www.responsivefilemanager.com/>`_ for `wysiwyg-tinymce <https://github.com/jDanek/wysiwyg-tinymce>`_ plugin
+Integration of `Responsive File Manager <https://www.responsivefilemanager.com/>`_ for `wysiwyg-tinymce <https://github.com/jDanek/tinymce-integration>`_ plugin
 
 .. contents::
 
@@ -9,7 +9,7 @@ Requirements
 ************
 
 - PHP 7.1+ strongly recommended
-- `wysiwyg-tinymce <https://github.com/jDanek/wysiwyg-tinymce>`_ plugin
+- `wysiwyg-tinymce <https://github.com/jDanek/tinymce-integration>`_ plugin
 - SunLight CMS 8
 
 Installation
