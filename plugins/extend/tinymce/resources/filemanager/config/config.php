@@ -3,6 +3,7 @@
 /* ---  incializace jadra  --- */
 
 use Sunlight\Core;
+use Sunlight\Settings;
 use Sunlight\Util\Environment;
 use Sunlight\User;
 
@@ -12,10 +13,11 @@ Core::init('../../../../../', array(
 ));
 
 $version = "9.14.0";
+
 if (session_id() == '') {
     session_start();
 }
-
+/*
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 mb_http_input('UTF-8');
@@ -24,6 +26,7 @@ mb_regex_encoding('UTF-8');
 ob_start('mb_output_handler');
 date_default_timezone_set('Europe/Prague');
 setlocale(LC_CTYPE, 'cs_CZ.UTF-8'); //correct transliteration
+*/
 
 /*
 |--------------------------------------------------------------------------
@@ -105,7 +108,7 @@ $config = array(
     |
     */
     //'base_url' => ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http"). "://". @$_SERVER['HTTP_HOST'],
-    'base_url' => Core::$url,
+    'base_url' => Core::getBaseUrl(),
     /*
     |--------------------------------------------------------------------------
     | path from base_url to base of upload folder
@@ -313,8 +316,8 @@ $config = array(
     // set maximum pixel width and/or maximum pixel height for all images
     // If you set a maximum width or height, oversized images are converted to those limits. Images smaller than the limit(s) are unaffected
     // if you don't need a limit set both to 0
-    'image_max_width'                         => _article_pic_w, //0
-    'image_max_height'                        => _article_pic_h, //0
+    'image_max_width'                         => Settings::get('article_pic_w'), //0
+    'image_max_height'                        => Settings::get('article_pic_h'), //0
     'image_max_mode'                          => 'auto',
     /*
     #  $option:  0 / exact = defined size;
@@ -329,8 +332,8 @@ $config = array(
     // If you set width or height to 0 the script automatically calculates the other dimension
     // Is possible that if you upload very big images the script not work to overcome this increase the php configuration of memory and time limit
     'image_resizing'                          => true, //false
-    'image_resizing_width'                    => _article_pic_w,
-    'image_resizing_height'                   => _article_pic_h,
+    'image_resizing_width'                    => Settings::get('article_pic_w'),
+    'image_resizing_height'                   => Settings::get('article_pic_h'),
     'image_resizing_mode'                     => 'auto', // same as $image_max_mode
     'image_resizing_override'                 => false,
     // If set to TRUE then you can specify bigger images than $image_max_width & height otherwise if image_resizing is
