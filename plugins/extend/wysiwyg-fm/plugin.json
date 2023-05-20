@@ -2,10 +2,11 @@
     "$schema": "../../../system/schema/extend.json",
     "name": "WYSIWYG File Manager",
     "description": "Responsive File Manager for WYSIWYG editors",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "environment": {
         "system": "^8.0"
     },
-    "url": "https://github.com/friends-of-sunlight-cms/",
-    "author": "Friends of Sunlight CMS"
+    "authors": [
+        {"name": "Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight-cms/"}
+    ]
 }
