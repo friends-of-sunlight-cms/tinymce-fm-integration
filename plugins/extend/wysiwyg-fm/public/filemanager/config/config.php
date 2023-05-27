@@ -230,7 +230,7 @@ $config = array(
     |
     */
 
-    'access_keys' => array(Core::$appId),
+    'access_keys' => array(Core::$secret),
 
     //--------------------------------------------------------------------------------------------------------
     // YOU CAN COPY AND CHANGE THESE VARIABLES INTO FOLDERS config.php FILES TO CUSTOMIZE EACH FOLDER OPTIONS
